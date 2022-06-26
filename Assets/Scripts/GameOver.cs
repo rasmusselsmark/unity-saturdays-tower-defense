@@ -8,7 +8,7 @@ public class GameOver : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            GameObject.Find("GameMaster").GetComponent<GameMaster>().gameOver = true;
+            GameMaster.Instance.gameOver = true;
             GameObject.Find("GameOverText").GetComponent<UnityEngine.UI.Text>().enabled = true;
         }
     }

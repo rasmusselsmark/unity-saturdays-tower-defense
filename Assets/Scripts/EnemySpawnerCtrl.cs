@@ -19,6 +19,11 @@ public class EnemySpawnerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameMaster.Instance.gameOver)
+        {
+            return;
+        }
+
         timerS += Time.deltaTime;
         nextS += Time.deltaTime;
 

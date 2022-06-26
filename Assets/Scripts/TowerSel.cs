@@ -5,13 +5,11 @@ using UnityEngine;
 public class TowerSel : MonoBehaviour
 {
     [SerializeField] int towerIndex;
-    GameMaster gameMasterObj;
     GameObject selected;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameMasterObj = GameObject.Find("GameMaster").GetComponent<GameMaster>();
         selected = gameObject.transform.Find("Selected").gameObject;
     }
 
@@ -19,7 +17,7 @@ public class TowerSel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        if (gameMasterObj.towerSelected == towerIndex)
+        if (GameMaster.Instance.towerSelected == towerIndex)
             selected.SetActive(true);
         else
             selected.SetActive(false);
@@ -27,6 +25,6 @@ public class TowerSel : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameMasterObj.towerSelected = towerIndex;
+        GameMaster.Instance.towerSelected = towerIndex;
     }
 }
