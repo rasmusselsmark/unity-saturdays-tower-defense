@@ -42,9 +42,8 @@ public class EnemyShoot : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Tower"))
         {
-            /*
             GameObject localBulletObj;
-            BulletEnemyCtrl bulletCtrl;
+            BulletCtrl bulletCtrl;
             Vector3 dir;
             float angle;
 
@@ -55,12 +54,11 @@ public class EnemyShoot : MonoBehaviour
             if (nextFire > 1 / fireRate)
             {
                 localBulletObj = Instantiate(bulletObj, transform.position, bulletObj.transform.rotation);
-                bulletCtrl = localBulletObj.GetComponent<BulletEnemyCtrl>();
+                bulletCtrl = localBulletObj.GetComponent<BulletCtrl>();
                 bulletCtrl.direction = dir;
                 bulletCtrl.hitImpact = hitImpact;
                 nextFire = 0;
             }
-            */
         }
     }
 }

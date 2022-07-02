@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.parent.Translate(transform.right * speed * Time.deltaTime);
     }
 
     public void Hit(float impact)
@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
         {
             GameMaster.Instance.money += this.money;
             // Dead
-            Destroy(gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
         }
         else
         {

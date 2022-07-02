@@ -34,5 +34,11 @@ public class BulletCtrl : MonoBehaviour
             enemyObj.Hit(hitImpact);
             Destroy(gameObject);
         }
+        else if (collision.gameObject.CompareTag("Tower"))
+        {
+            Tower tower = collision.gameObject.GetComponent<Tower>();
+            tower.Hit(hitImpact);
+            Destroy(gameObject);
+        }
     }
 }

@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towersObj:
-  - {fileID: 9188527239897769252, guid: 77314ae435b1a40afb75454edc5cf520, type: 3}
-  - {fileID: 9188527239897769252, guid: 198ebf2492334455e91f519384f33bfc, type: 3}
+  - {fileID: 1284941857531574917, guid: 328da46a8c76743d691ef18bb2b8cac8, type: 3}
+  - {fileID: 5197493227512117738, guid: 2f3ea9b63f6c043c59d8b105febfe0e1, type: 3}
