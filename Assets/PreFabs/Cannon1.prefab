@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554418013e5aac549bbfa219db2a0ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitImpact: 10
+  hitImpact: 20
   fireRate: 10
   bulletObj: {fileID: 5424728333898081975, guid: 50141e50a9bf24141ba0bd6010510e24, type: 3}
+  cost: 25

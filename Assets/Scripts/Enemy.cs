@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float speed = 10;
     [SerializeField] float hitDiv = 10;
     [SerializeField] GameObject barObj;
+    [SerializeField] int money = 10;
     int path;
     
     [SerializeField]
@@ -32,11 +33,14 @@ public class Enemy : MonoBehaviour
         health -= impact / hitDiv;
         if (health <= 0)
         {
+            GameMaster.Instance.money += this.money;
             // Dead
             Destroy(gameObject);
         }
         else
+        {
             barObj.transform.localScale = new Vector3(health / 100, 1, 1);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)

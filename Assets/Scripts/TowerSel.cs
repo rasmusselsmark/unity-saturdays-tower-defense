@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerSel : MonoBehaviour
 {
     [SerializeField] int towerIndex;
+    [SerializeField] int cost; // TODO: duplicate field!
     GameObject selected;
 
     // Start is called before the first frame update
@@ -17,10 +18,14 @@ public class TowerSel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        if (GameMaster.Instance.towerSelected == towerIndex)
+        if (GameMaster.Instance.towerSelected == towerIndex && GameMaster.Instance.money >= cost)
+        {
             selected.SetActive(true);
+        }
         else
+        {
             selected.SetActive(false);
+        }
     }
 
     private void OnMouseDown()

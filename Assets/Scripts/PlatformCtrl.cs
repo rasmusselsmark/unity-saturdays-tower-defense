@@ -23,6 +23,7 @@ public class PlatformCtrl : MonoBehaviour
         if (currentTowerObj == null)
         {
             currentTowerObj = Instantiate(towersObj[GameMaster.Instance.towerSelected], transform.position, transform.rotation);
+            GameMaster.Instance.money -= currentTowerObj.GetComponent<TowerCannon>().cost;
         }
     }
 }

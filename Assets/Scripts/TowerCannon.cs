@@ -7,6 +7,7 @@ public class TowerCannon : MonoBehaviour
     [SerializeField] float hitImpact = 10;
     [SerializeField] float fireRate = 10;   // pr. s
     [SerializeField] GameObject bulletObj;
+    public int cost;
 
     float nextFire;
 

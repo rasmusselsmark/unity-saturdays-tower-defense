@@ -117,3 +117,4 @@ MonoBehaviour:
   hitImpact: 50
   fireRate: 15
   bulletObj: {fileID: 5424728333898081975, guid: 50141e50a9bf24141ba0bd6010510e24, type: 3}
+  cost: 250

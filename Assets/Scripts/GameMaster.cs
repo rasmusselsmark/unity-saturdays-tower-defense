@@ -7,7 +7,11 @@ public class GameMaster : MonoBehaviour
 {
     [System.NonSerialized] public int towerSelected = 0;
     [System.NonSerialized] public bool gameOver;
+    [System.NonSerialized] public int towerCost = 0;
+    [System.NonSerialized] public int money = 200;
+
     public UnityEngine.UI.Text TimeText;
+    public UnityEngine.UI.Text MoneyText;
 
     float timeUsed;
     
@@ -23,6 +27,7 @@ public class GameMaster : MonoBehaviour
         seconds = (int)(timeUsed % 60);
         
         TimeText.text = "Time : " + minutes.ToString("00") + ":" + seconds.ToString("00");
+        MoneyText.text = $"Coins : {money}";
     }
 
     private static GameMaster instance = null;
