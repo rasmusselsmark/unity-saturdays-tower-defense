@@ -10,8 +10,8 @@ public class GameMaster : MonoBehaviour
     [System.NonSerialized] public int towerCost = 0;
     [System.NonSerialized] public int money = 200;
 
-    public UnityEngine.UI.Text TimeText;
-    public UnityEngine.UI.Text MoneyText;
+    public Text TimeText;
+    public Text MoneyText;
 
     float timeUsed;
     

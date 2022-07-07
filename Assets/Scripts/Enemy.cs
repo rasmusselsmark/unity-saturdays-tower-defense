@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            barObj.transform.localScale = new Vector3(health / 100, 1, 1);
+            barObj.GetComponent<HealthBar>().SetHealth(health);
         }
     }
 
